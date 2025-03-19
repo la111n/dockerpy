@@ -22,7 +22,7 @@ if button:
         response = requests.post("http://api:8000/sample_endpoint", json=data)
         
         if response.status_code == 200:
-            st.success(f"Ответ от бэка: {response.json()}")
+            st.success(f"Ваша измененная строка: {response.json()}")
         else:
             st.error(f"Ошибка: {response.status_code} - {response.text}")
     except requests.exceptions.RequestException as e:
