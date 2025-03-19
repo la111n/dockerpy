@@ -1,10 +1,13 @@
+version: '3.8'
 services:
   api:
     build: ./api
+    image: la111n/api-image:latest
     ports:
       - "8000:8000"
   app:
     build: ./app
+    image: la111n/app-image:latest
     ports:
       - "8501:8501"
     depends_on:
